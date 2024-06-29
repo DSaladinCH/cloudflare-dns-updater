@@ -4,9 +4,15 @@ using System.Reflection;
 using System.Text;
 using System.Text.Json.Nodes;
 
+
 string basePath = args[0];
 string configFile = Path.Combine(basePath, "cloudflare.config");
 string logFilePath = Path.Combine(basePath, "cloudflare.log");
+
+// if log file is from previous day, delete it
+FileInfo logFileInfo = new(logFilePath);
+if (logFileInfo.CreationTime < DateTime.Today)
+    logFileInfo.Delete();
 
 Logger.LogInfo(logFilePath, "Starting updating DNS records with the current ip");
 

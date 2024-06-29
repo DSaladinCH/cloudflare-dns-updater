@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PackageId>DSaladin.CloudflareDNSUpdater</PackageId>
@@ -12,6 +12,7 @@
     <Product>DSaladin.CloudflareDNSUpdater</Product>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <Description>Updated all dns records with type A in a specific zone</Description>
+    <Version>1.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
