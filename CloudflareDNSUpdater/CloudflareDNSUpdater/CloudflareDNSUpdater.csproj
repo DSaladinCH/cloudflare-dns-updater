@@ -5,14 +5,17 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PackageId>DSaladin.CloudflareDNSUpdater</PackageId>
+    <PackageId>DSaladin.CloudflareDnsUpdater</PackageId>
     <Title>Cloudflare DNS Updater</Title>
     <Authors>DSaladin</Authors>
     <Company>DSaladin</Company>
-    <Product>DSaladin.CloudflareDNSUpdater</Product>
+    <Product>DSaladin.CloudflareDnsUpdater</Product>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <Description>Updated all dns records with type A in a specific zone</Description>
     <Version>1.1</Version>
+    <RootNamespace>DSaladin.CloudflareDnsUpdater</RootNamespace>
+    <AssemblyName>DSaladin.CloudflareDnsUpdater</AssemblyName>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -31,9 +34,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="cloudflare.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="9.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
   </ItemGroup>
 
 </Project>
