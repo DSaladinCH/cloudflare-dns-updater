@@ -1,0 +1,13 @@
+services:
+    cloudflare-dns-updater:
+        image: cloudflare-dns-updater:latest
+        container_name: cloudflare-dns-updater
+        restart: unless-stopped
+        environment:
+            - Token=
+            - ZoneIdentifiers=
+        logging:
+            driver: "json-file"
+            options:
+                max-size: "10m"
+                max-file: "3"

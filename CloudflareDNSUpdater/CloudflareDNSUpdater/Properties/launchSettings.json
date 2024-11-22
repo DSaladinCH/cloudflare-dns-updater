@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "CloudflareDNSUpdater": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "Token": "8n3afasv5EeAii2Hw70-tPh8f0ZuKYJ2zDW-Sy0g",
+        "ZoneIdentifiers": "d4b5c9803c7c488474b7c95ff35a81f7,4f47387cb251dd3a8988df37c94c18dc,deaa0805533355e13aeecb5a7eb88f42"
+      }
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
